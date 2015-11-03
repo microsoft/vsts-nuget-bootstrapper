@@ -1,9 +1,9 @@
 # Bootstrap a development environment for use with VSO Package Management
 
 ## Background
-VSS.PackageManagement.Bootstrap provides a set of tools and scripts that makes it easy to set up a development environment that uses VSO Package Management.
+**VSS.PackageManagement.Bootstrap** provides a set of tools and scripts that makes it easy to set up a development environment that uses VSO Package Management.
 
-Much like the "Visual Studio Developer Prompt" makes it easy to interact with MSBuild, VSS.PackageManagement.Bootstrap creates a development environment that makes it easy to always have the latest package management tools, perform authentication, and use feeds.
+Much like the "Visual Studio Developer Prompt" makes it easy to interact with MSBuild, **VSS.PackageManagement.Bootstrap** creates a development environment that makes it easy to always have the latest package management tools, perform authentication, and use feeds.
 
 ### Why use it?
 1. Users don't need to have nuget.exe installed and on their path. The environment automatically fetches and uses the latest supported NuGet tooling.
@@ -68,7 +68,8 @@ First, clone the [sample repo](https://github.com/Microsoft/VSS.PackageManagemen
 	```
 
 ### From an existing project in Visual Studio
-*Note: NuGet in Visual Studio 2015 currently requires a project to exist to install solution-level NuGet packages.  If you'd like to use this method but don't yet have a project, create a project and then follow these steps*
+*Note: NuGet in Visual Studio 2015 currently requires a project to exist to install solution-level NuGet packages.  If you'd like to use this method but don't yet have a project, create a project and then follow these steps.*
+
 1. Open the project in Visual Studio 2015.
 2. Right click on the solution, and select "Manage NuGet Packages for Solution"
 
