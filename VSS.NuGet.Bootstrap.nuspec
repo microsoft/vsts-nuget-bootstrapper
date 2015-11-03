@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>VSS.PackageManagement.Bootstrap</id>
+    <version>$version$</version>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Bootstrap a repository for use with Visual Studio Online Package Management</description>
+  </metadata>
+  <files>
+    <file src="tools\Install.ps1" target="tools" /> 
+    <file src="tools\Bootstrap.ps1" target="tools" /> 
+    <file src="scripts\init\*" target="scripts\init" /> 
+    <file src="nuget.config" target="\" /> 
+    <file src="init.*" target="\" />
+  </files>
+</package>
