@@ -23,7 +23,7 @@ If you want to start from an existing example, or just play around, you can star
 First, clone the [sample repo](https://github.com/Microsoft/VSS.PackageManagement.Sample.git).  Then, change directories into the repo, and run init.cmd (CMD) or init.ps1 (Powershell).  That's it!
  * If you're cloning from the command line, you may need to set up [alternate credentials](http://blogs.msdn.com/b/buckh/archive/2013/01/07/how-to-connect-to-tf-service-without-a-prompt-for-liveid-credentials.aspx) or use a personal access token.
  * You should see output similar to the following:
-	```
+	```winbatch
 	d:\repos>git clone https://github.com/Microsoft/VSS.PackageManagement.Sample.git
 	Cloning into 'VSS.PackageManagement.Sample'...
 	Unpacking objects: 100% (41/41), done.
@@ -41,9 +41,10 @@ First, clone the [sample repo](https://github.com/Microsoft/VSS.PackageManagemen
  
 ### From the command line (new or existing project)
 1. Open a PowerShell prompt and cd into the root of your repository.
-2. Download nuget.exe from https://dist.nuget.org/win-x86-commandline/latest/nuget.exe. You can run `Invoke-WebRequest https://dist.nuget.org/win-x86-commandline/latest/nuget.exe -OutFile nuget.exe` in PowerShell.
-3. Run the command ```<path_to_nuget.exe> install -OutputDirectory packages -Source "https://www.myget.org/F/vss-package-management/api/v3/index.json" VSS.PackageManagement.Bootstrap```
-   ```
+2. Download nuget.exe from https://dist.nuget.org/win-x86-commandline/latest/nuget.exe. You can run ``Invoke-WebRequest https://dist.nuget.org/win-x86-commandline/latest/nuget.exe -OutFile nuget.exe``` in PowerShell.
+3. Run the command ```<path_to_nuget.exe> install -OutputDirectory packages -Source "https://www.myget.org/F/vss-package-management/api/v3/index.json" VSS.PackageManagement.Bootstrap```. You'll see:
+
+   ```powershell
    PS C:\projects\MyCoolProject> nuget install -OutputDirectory packages -Source "https://www.myget.org/F/vss-package-management/api/v3/index.json" VSS.PackageManagement.Bootstrap
 	Attempting to gather dependencies information for package 'VSS.PackageManagement.Bootstrap.0.0.1' with respect to project 'C:\projects\MyCoolProject', targeting 'Any,Version=v0.0'
 	Attempting to resolve dependencies for package 'VSS.PackageManagement.Bootstrap.0.0.1' with DependencyBehavior 'Lowest'
@@ -53,8 +54,9 @@ First, clone the [sample repo](https://github.com/Microsoft/VSS.PackageManagemen
 	Added package 'VSS.PackageManagement.Bootstrap.0.0.1' to folder 'packages'
 	Successfully installed 'VSS.PackageManagement.Bootstrap 0.0.1' to packages
    ```
-4. Run the command ```.\packages\VSS.PackageManagement.Bootstrap.*\tools\Bootstrap.ps1``` to bootstrap and initialize your environment.
-	```
+4. Run the command ```.\packages\VSS.PackageManagement.Bootstrap.*\tools\Bootstrap.ps1``` to bootstrap and initialize your environment. You'll see:
+
+	```powershell
 	PS C:\project\MyCoolProject> .\packages\VSS.PackageManagement.Bootstrap.*\tools\Bootstrap.ps1
 	The option -repoRoot was not specified, assuming current working directory
 	Setting up the VSS Package Management environment...
@@ -87,8 +89,9 @@ First, clone the [sample repo](https://github.com/Microsoft/VSS.PackageManagemen
 
 ## Update
 ### From the command line
-To update your environment, simply run ```.\scripts\init\Update-Environment.ps1```.  This will find the latest version available, compare it to your version, and (after prompting) update to the new environment.
-``` 
+To update your environment, simply run ```.\scripts\init\Update-Environment.ps1```.  This will find the latest version available, compare it to your version, and (after prompting) update to the new environment. You'll see:
+
+```powershell
 PS C:\projects\MyCoolProject> .\scripts\init\Update-Environment.ps1
 The option -repoRoot was not specified or was not found, assuming current working directory
 Current version is 0.0.3
