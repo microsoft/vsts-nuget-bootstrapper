@@ -63,7 +63,7 @@ if ($response.StatusCode -eq 200)
         [System.IO.Directory]::Delete($downloadDest, $true)
     }
 
-    Rename-Item $downloadDestTemp $downloadDest
+    Move-Item -Force $downloadDestTemp $downloadDest
     Write-Host "Updated $downloadName"
 }
 elseif ($response.StatusCode -eq 304)
