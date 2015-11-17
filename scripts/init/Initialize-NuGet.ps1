@@ -19,8 +19,11 @@ if (!($env:Path -like "*$toolsDir;*"))
 }
 
 # Ensure VSS.NuGet.AuthHelper is up-to-date
-$authHelperDownloadName = "VSS.NuGet.AuthHelper"
-$authHelperDest = . "$PSScriptRoot\Initialize-DownloadLatest.ps1" -OutDir $toolsDir -DownloadUrl "https://vssnuget.pkgs.visualstudio.com/_apis/public/nuget/client/VSS.NuGet.AuthHelper.zip" -DownloadName $authHelperDownloadName -Unzip $true
+$authHelperDownloadFeed = "https://nuget.org/api/v2/"
+$authHelperPackageName = "Microsoft.VisualStudio.Services.NuGet.AuthHelper"
+$authHelperExeName = "VSS.NuGet.AuthHelper.exe"
+
+$authHelperDest = . "$PSScriptRoot\Initialize-InstallFromNuget.ps1" -OutDir $toolsDir -DownloadFeed $authHelperDownloadFeed -PackageName $authHelperPackageName -targetFileName $authHelperExeName
 
 # Add VSS.NuGet.AuthHelper to the path
 if (!($env:Path -like "*$authHelperDest;*"))
