@@ -1,7 +1,7 @@
-# Bootstrap a development environment for use with VSO Package Management
+# Bootstrap a development environment for use with Visual Studio Team Services Package Management
 
 ## Background
-**Microsoft.VisualStudio.Services.NuGet.Bootstrap** provides a set of tools and scripts that makes it easy to set up a development environment that uses VSO Package Management.
+**Microsoft.VisualStudio.Services.NuGet.Bootstrap** provides a set of tools and scripts that makes it easy to set up a development environment that uses VSTS Package Management.
 
 Much like the "Visual Studio Developer Prompt" makes it easy to interact with MSBuild, **Microsoft.VisualStudio.Services.NuGet.Bootstrap** creates a development environment that makes it easy to always have the latest package management tools, perform authentication, and use feeds.
 
@@ -33,7 +33,7 @@ First, clone the [sample repo](https://github.com/Microsoft/vsts-nuget-sample.gi
 	
 	d:\repos\vsts-nuget-sample>init.cmd
 	Ensuring that NuGet is up to date... Updated NuGet
-	Ensuring that you have credentials for VSO package sources...
+	Ensuring that you have credentials for VSTS package sources...
 	Already have credentials for NuGet.Bootstrap.Sample.
 	...
 	```
@@ -65,7 +65,7 @@ First, clone the [sample repo](https://github.com/Microsoft/vsts-nuget-sample.gi
 	Looks like you don't have a .gitignore yet, so we'll create one for you
 	Updated your VSS.PackageManagement environment to version 0.0.1.  Please check in changes to source control.  Now running init.ps1 to put you into the updated environment...
 	Ensuring that NuGet is up to date... Updated NuGet
-	Ensuring that you have credentials for VSO package sources...
+	Ensuring that you have credentials for VSTS package sources...
 	Already have credentials for VSS.PackageManagement.Bootstrap.
 	```
 

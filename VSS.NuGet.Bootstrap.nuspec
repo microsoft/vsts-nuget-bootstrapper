@@ -3,10 +3,15 @@
   <metadata>
     <id>Microsoft.VisualStudio.Services.NuGet.Bootstrap</id>
     <version>$version$</version>
+    <title>NuGet Bootstrapper for Microsoft Visual Studio Team Services</title>
     <authors>Microsoft</authors>
-    <owners>Microsoft</owners>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Bootstrap a repository for use with Visual Studio Online Package Management</description>
+    <owners>microsoft,nugetvss</owners>
+    <licenseUrl>http://go.microsoft.com/fwlink/?LinkId=329770</licenseUrl>
+    <projectUrl>http://go.microsoft.com/fwlink/?LinkId=698609</projectUrl>
+    <iconUrl>http://go.microsoft.com/fwlink/?LinkId=615568</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>The NuGet Bootstrapper provides a set of tools and scripts that makes it easy to set up a development environment that uses VSTS Package Management NuGet feeds.
+    Much like the "Visual Studio Developer Command Prompt" makes it easy to interact with MSBuild, Microsoft.VisualStudio.Services.NuGet.Bootstrap creates a development environment that makes it easy to always have the latest package management tools, perform authentication, and use feeds.</description>
   </metadata>
   <files>
     <file src="tools\Install.ps1" target="tools" /> 
