@@ -42,10 +42,10 @@ First, clone the [sample repo](https://github.com/Microsoft/vsts-nuget-sample.gi
 ### From the command line (new or existing project)
 1. Open a PowerShell prompt and cd into the root of your repository.
 2. Download nuget.exe from https://dist.nuget.org/win-x86-commandline/latest/nuget.exe. You can run ``Invoke-WebRequest https://dist.nuget.org/win-x86-commandline/latest/nuget.exe -OutFile nuget.exe``` in PowerShell.
-3. Run the command ```<path_to_nuget.exe> install -OutputDirectory packages -Source "https://www.myget.org/F/vss-package-management/api/v3/index.json" Microsoft.VisualStudio.Services.NuGet.Bootstrap```. You'll see:
+3. Run the command ```<path_to_nuget.exe> install -OutputDirectory packages Microsoft.VisualStudio.Services.NuGet.Bootstrap```. You'll see:
 
    ```powershell
-   PS C:\projects\MyCoolProject> nuget install -OutputDirectory packages -Source "https://www.myget.org/F/vss-package-management/api/v3/index.json" Microsoft.VisualStudio.Services.NuGet.Bootstrap
+   PS C:\projects\MyCoolProject> nuget install -OutputDirectory packages Microsoft.VisualStudio.Services.NuGet.Bootstrap
 	Attempting to gather dependencies information for package 'Microsoft.VisualStudio.Services.NuGet.Bootstrap.0.0.1' with respect to project 'C:\projects\MyCoolProject', targeting 'Any,Version=v0.0'
 	Attempting to resolve dependencies for package 'Microsoft.VisualStudio.Services.NuGet.Bootstrap.0.0.1' with DependencyBehavior 'Lowest'
 	Resolving actions to install package 'Microsoft.VisualStudio.Services.NuGet.Bootstrap.0.0.1'
@@ -77,14 +77,13 @@ First, clone the [sample repo](https://github.com/Microsoft/vsts-nuget-sample.gi
 
    ![Selecting "Manage NuGet Packages for Solution"](.img/bootstrap_ide_1.png)
 
-3. Use the settings dialog to add the package source "https://www.myget.org/F/vss-package-management/api/v3/index.json" with name "vss-package-management"
-4. Switch to the "vss-package-management" package source, and find the package Microsoft.VisualStudio.Services.NuGet.Bootstrap.  Choose the latest version, and hit install.
+3. Find the package Microsoft.VisualStudio.Services.NuGet.Bootstrap.  Choose the latest version, and hit install.
    ![Installing Microsoft.VisualStudio.Services.NuGet.Bootstrap](.img/bootstrap_ide_2.png)
 
-5. You should see output similar to the following:
+4. You should see output similar to the following:
    ![Install output](.img/bootstrap_ide_3.png)
 
-6. You may notice that a packages.config was either created or modified in your project, containing the package "Microsoft.VisualStudio.Services.NuGet.Bootstrap".  You can delete this file (or remove the entry for VSS.PackageManagement.Bootstrap) if you wish to prevent NuGet from restoring this package.  That is, the packages.config entry and package itself is no longer required once your environment is set up, although it will not hurt anything.
+5. You may notice that a packages.config was either created or modified in your project, containing the package "Microsoft.VisualStudio.Services.NuGet.Bootstrap".  You can delete this file (or remove the entry for VSS.PackageManagement.Bootstrap) if you wish to prevent NuGet from restoring this package.  That is, the packages.config entry and package itself is no longer required once your environment is set up, although it will not hurt anything.
    ![Project packages.config](.img/bootstrap_ide_4.png)
 
 ## Update
