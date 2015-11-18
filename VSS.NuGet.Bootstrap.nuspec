@@ -12,6 +12,8 @@
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>The NuGet Bootstrapper provides a set of tools and scripts that makes it easy to set up a development environment that uses VSTS Package Management NuGet feeds.
     Much like the "Visual Studio Developer Command Prompt" makes it easy to interact with MSBuild, Microsoft.VisualStudio.Services.NuGet.Bootstrap creates a development environment that makes it easy to always have the latest package management tools, perform authentication, and use feeds.</description>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+    <tags>Microsoft Visual Studio Team Services VSTS VSO VisualStudio Package Management NuGet</tags>
   </metadata>
   <files>
     <file src="tools\Install.ps1" target="tools" /> 
