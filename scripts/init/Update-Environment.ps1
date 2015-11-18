@@ -22,13 +22,14 @@ if(!(Test-Path $nugetExe)) {
 }
 
 # Get current version
-$packageName = "VSS.PackageManagement.Bootstrap"
+$packageName = "Microsoft.VisualStudio.Services.NuGet.Bootstrap"
 $versionMarkFilePath = "$repoRoot\scripts\init\.version"
 $currentVersion = (Get-Content $versionMarkFilePath)
+$nugetSource = "https://nuget.org/api/v2/"
 Write-Host "Current version is $currentVersion"
 
 # Get newest available version
-$listOutput = & $nugetExe list -NonInteractive $packageName
+$listOutput = & $nugetExe list -source $nugetSource -NonInteractive $packageName
 
 if ($LastExitCode -ne 0 -or (! $listOutput)) {
     Write-Error "Unable to find $packageName"
@@ -49,7 +50,7 @@ if ($currentVersion -ne $newestVersion) {
     if ($confirmation -eq "y") {
 
         # Download the newest version
-        & $nugetExe install $packageName -Version $newestVersion -OutputDirectory $packagesDir
+        & $nugetExe install $packageName -Version $newestVersion -OutputDirectory $packagesDir -source $nugetSource
 
         # Bootstrap
         $bootstrapPath = Resolve-Path "$repoRoot\packages\$packageName.$newestVersion\tools\Bootstrap.ps1"
