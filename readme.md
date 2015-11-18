@@ -83,7 +83,7 @@ First, clone the [sample repo](https://github.com/Microsoft/vsts-nuget-sample.gi
 4. You should see output similar to the following:
    ![Install output](.img/bootstrap_ide_3.png)
 
-5. You may notice that a packages.config was either created or modified in your project, containing the package "Microsoft.VisualStudio.Services.NuGet.Bootstrap".  You can delete this file (or remove the entry for VSS.PackageManagement.Bootstrap) if you wish to prevent NuGet from restoring this package.  That is, the packages.config entry and package itself is no longer required once your environment is set up, although it will not hurt anything.
+5. You may notice that a packages.config was either created or modified in your project, containing the package "Microsoft.VisualStudio.Services.NuGet.Bootstrap".  You can delete this file (or remove the entry for Microsoft.VisualStudio.Services.NuGet.Bootstrap) if you wish to prevent NuGet from restoring this package.  That is, the packages.config entry and package itself is no longer required once your environment is set up, although it will not hurt anything.
    ![Project packages.config](.img/bootstrap_ide_4.png)
 
 ## Update
