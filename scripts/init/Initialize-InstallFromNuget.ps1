@@ -29,5 +29,3 @@ else
 }
 
 Remove-Item $tempFolder -Force -Recurse
-
-return $downloadDest
