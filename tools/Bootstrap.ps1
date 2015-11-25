@@ -31,7 +31,7 @@ if (!(Test-Path "$repoRoot\nuget.config")) {
 }
 
 # Write out the current version
-$packageName = "VSS.PackageManagement.Bootstrap"
+$packageName = "Microsoft.VisualStudio.Services.NuGet.Bootstrap"
 $version = ($bootstrapRootDir -split "$packageName.")[1]
 $versionMarkFilePath = "$initScriptsDir\.version"
 Write-Output $version | Out-File -Encoding ASCII $versionMarkFilePath
