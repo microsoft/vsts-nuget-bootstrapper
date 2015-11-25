@@ -5,6 +5,8 @@
     [Parameter(Mandatory=$true)] [string] $targetFileName
 )
 
+$ErrorActionPreference = "Stop"
+
 $downloadDest = Join-Path $outDir $targetFileName
 
 $tempFolder = "$env:temp\Package-$(Get-Date -format 'yyyy-MM-dd_hh-mm-ss')"

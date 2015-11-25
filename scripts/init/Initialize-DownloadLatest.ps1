@@ -5,6 +5,8 @@
     [Parameter(Mandatory=$false)] [boolean] $unzip = $false
 )
 
+$ErrorActionPreference = "Stop"
+
 # Grab the VSS.NuGet toolset from VSO
 Add-Type -AssemblyName System.IO
 Add-Type -AssemblyName System.IO.Compression.FileSystem
