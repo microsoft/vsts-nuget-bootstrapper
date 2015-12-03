@@ -27,7 +27,7 @@ if (!(Test-Path "$repoRoot\nuget.config")) {
     Write-Host "Looks like you don't have a nuget.config yet, so we'll create one for you"
     Copy-Item "$bootstrapRootDir\nuget.config" $repoRoot
 } else {
-    Write-Host "You already have a nuget.config.  Not touching it, but you'll want to add the package source that contains VSS.PackageManagement.Bootstrap."
+    Write-Host "You already have a nuget.config.  Not touching it, but you'll want to add the package source that contains Microsoft.VisualStudio.Services.NuGet.Bootstrap."
 }
 
 # Write out the current version
