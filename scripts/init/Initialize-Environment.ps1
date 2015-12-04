@@ -18,9 +18,6 @@ if (Test-Path $preInitScript) {
 # Download the NuGet tools if necessary
 . "$scriptsDir\Initialize-NuGet.ps1" -RepoRoot $repoRoot
 
-# Ensure we have credentials for VSO NuGet sources
-. "$scriptsDir\Initialize-NuGetCredentials.ps1" -RepoRoot $repoRoot
-
 # Run PreRestoreTools.ps1 if it exists
 if (Test-Path $preRestoreToolsScript) {
     . $preRestoreToolsScript -RepoRoot $repoRoot
