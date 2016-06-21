@@ -104,3 +104,8 @@ If you left a project-level packages.config with the package "Microsoft.VisualSt
 Simply use "Manage NuGet Packages for Solution" in the IDE to update the package.
 
 Note that if you mix command-line updating with this method, the version "currently installed" by the IDE may not match the version actually installed. 
+
+
+# Policy
+
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
